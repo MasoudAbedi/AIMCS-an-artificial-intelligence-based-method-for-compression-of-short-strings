@@ -139,7 +139,7 @@ If you find AIMCS useful please cite us in your work:
  ```  
 ## Authors
 
--Abedi, Masoud
--Pourkiani, Mohammadreza
+ - Abedi, Masoud 
+ - Pourkiani, Mohammadreza 
 
 
