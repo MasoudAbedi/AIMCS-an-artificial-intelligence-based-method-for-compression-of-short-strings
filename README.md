@@ -12,6 +12,7 @@ We programmed the AIMCS algorithm by C# in Windows. It must be noticed that .NET
 
 Example 1:
 
+```
 AIMCSClass AIMCSSend = new AIMCSClass();
 
 AIMCSClass AIMCSReceive = new AIMCSClass();
@@ -19,6 +20,8 @@ AIMCSClass AIMCSReceive = new AIMCSClass();
 byte[] t_byte = AIMCSSend.Compress("Mytext");
 
 string decompressed = AIMCSReceive.Decompress(t_byte);
+```
+
 
 And in the second example we show how AIMCS works for compression of several different tiny strings. 
 
