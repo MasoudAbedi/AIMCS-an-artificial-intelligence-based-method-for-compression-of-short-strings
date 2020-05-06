@@ -125,4 +125,18 @@ The size of strings compression with new method:        453206  0.775%  Sort=6
 
 It is worth mentioning that this algorithm can be used for compression of any types of short strings on any application.
 
+## Citation
+If you find AIMCS useful please cite us in your work:
+ ```
+@inproceedings{Abedi2020AIMCS,
+  title={AIMCS: An Artificial Intelligence Based Method for Compression of Short Strings},
+  author={Abedi, Masoud, and Pourkiani, Mohammadreza},
+  booktitle={IEEE 18th World Symposium on Applied Machine Intelligence and Informatics (SAMI 2020)},
+  pages={},
+  year={2020},
+  organization={IEEE}
+}
+ ```  
+
+
 
