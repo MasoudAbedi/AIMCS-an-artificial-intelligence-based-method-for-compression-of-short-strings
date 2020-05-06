@@ -12,7 +12,7 @@ We programmed the AIMCS algorithm by C# in Windows. It must be noticed that .NET
 
 ![How to add the file to your project in visual studio](https://user-images.githubusercontent.com/64810541/81226768-a82f9a80-8feb-11ea-8847-7b1c1f7eb81d.jpg)
 
-Here we have provided two examples. In the first example (which could be considered as the schema of our method) we simply show how AIMCS works for compression of one tiny string.
+Here we have provided two examples (based on ASCII). In the first example (which could be considered as the schema of our method) we simply show how AIMCS works for compression of one tiny string.
 
 ### Example 1:
 
@@ -123,5 +123,6 @@ The size of original strings:   584630
 The size of strings compression with new method:        453206  0.775%  Sort=6
  ```   
 
+It is worth mentioning that this algorithm can be used for compression of any types of short strings over any kind of network.
 
 
