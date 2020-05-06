@@ -8,7 +8,9 @@ As is mentioned in the description, here we discuss about the basic compression 
 In the following, we show how the AIMCS code works for the compression of considered tiny strings. 
 
 ## Execution Requirements
-We programmed the AIMCS algorithm by C# in Windows. It must be noticed that .NET framework 2 and Visual Studio are required for the code execution process. In addition, the AIMCS.cs file must be added to the project file. Here we have provided two examples. In the first example (which could be considered as the schema of our method) we simply show how AIMCS works for compression of one tiny string.
+We programmed the AIMCS algorithm by C# in Windows. It must be noticed that .NET framework 2 and Visual Studio are required for the code execution process. In addition, the AIMCS.cs file must be added to the project file.
+
+Here we have provided two examples. In the first example (which could be considered as the schema of our method) we simply show how AIMCS works for compression of one tiny string.
 
 ### Example 1:
 
