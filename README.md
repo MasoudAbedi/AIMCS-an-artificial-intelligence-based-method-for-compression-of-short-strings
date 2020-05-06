@@ -10,7 +10,7 @@ In the following, we show how the AIMCS code works for the compression of consid
 # Execution Requirements
 We programmed the AIMCS algorithm by C# in Windows. It must be noticed that .NET framework 2 and Visual Studio are required for the code execution process. In addition, the AIMCS.cs file must be added to the project file. Here we have provided two examples. In the first example (which could be considered as the schema of our method) we simply show how AIMCS works for compression of one tiny string.
 
-Example 1:
+# Example 1:
 
 ```
 AIMCSClass AIMCSSend = new AIMCSClass();
@@ -22,7 +22,8 @@ string decompressed = AIMCSReceive.Decompress(t_byte);
 
 And in the second example we show how AIMCS works for compression of several different tiny strings. 
 
-Example 2:
+# Example 2:
+
 The generated tiny strings can be found in the attached file “TinyStringExmples.text” and in the following we have provided explanations about different parts of the code. 
 
 The following .NET libraries must be used:
@@ -58,6 +59,63 @@ In the following part, the initial values of the variables are set and the compr
             AIMCSSend.alpha = 0.045;//alpha
  ```
 In the following for-loop, the tiny strings gets compressed in each repetition by the object of the AIMCS class. The first if-condition also checks to find out if the table needs to be re-ordered or not. If a re-orders was required, the second if-condition would re-order the table.  
+ ```
+            for (int i = 0; i < Temp.Length && Temp[i] != null; i++)
+            {
+                byte[] t_byte = AIMCSSend.Compress(Temp[i]);
+                counterChar += Temp[i].Length;
+                sizeofNewMethod += t_byte.Length;
+                string decompressed = AIMCSReceive.Decompress(t_byte);
+                if (counterChar > AIMCSSend.beta)
+                {
+                    counterChar = 0;
+                    AIMCSSend.checkUseOfChar();
+                }
+                if (AIMCSSend.needResort)
+                {
+                    useResort++;
+                    AIMCSSend.needResort = false;
+                    AIMCSSend.Resort();
+                    byte[] newTable = AIMCSSend.makeTableforSending();
+                    sizeofNewMethod += newTable.Length;
+                    AIMCSReceive.Decompress(newTable);
+                }
+            }
+ ```
+ 
+The next part of the code calculates and prints the compression ratio. 
+  ```
+double percent = Math.Round((-1 * (((originalSize - sizeofNewMethod ) / originalSize) - 1)), 3);
+            Console.WriteLine("\nThe size of strings after getting compressed by AIMCS:" + '\t' + (sizeofNewMethod).ToString() + '\t' +
+                                 percent.ToString() + "%" + '\t' + "Sort=" + useResort.ToString());         
+
+   Console.ReadKey();
+ ```
+
+And the following functions is used for reading the tiny strings that must be compressed.  
+ ```
+            public static void readTextFile(String path)
+        {
+            path = AppDomain.CurrentDomain.BaseDirectory + "\\" + path;
+            if (!File.Exists(path))
+            {
+                using (FileStream fs = File.Create(path))
+                {
+                    Byte[] info =
+                        new UTF8Encoding(true).GetBytes("The File Should replace this file.");
+                    fs.Write(info, 0, info.Length);
+                }
+            }
+            int index = 0;
+            string s = "";
+            using (StreamReader sr = File.OpenText(path))
+                while ((s = sr.ReadLine()) != null)
+                    Temp[index++] = s;
+        }
+ ```   
+
+
+
 
 
 
