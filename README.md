@@ -123,6 +123,6 @@ The size of original strings:   584630
 The size of strings compression with new method:        453206  0.775%  Sort=6
  ```   
 
-It is worth mentioning that this algorithm can be used for compression of any types of short strings over any kind of network.
+It is worth mentioning that this algorithm can be used for compression of any types of short strings on any application.
 
 
