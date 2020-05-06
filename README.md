@@ -9,7 +9,7 @@ In the following, we show how the AIMCS code works for the compression of consid
 
 ## Execution Requirements
 We programmed the AIMCS algorithm by C# in Windows. It must be noticed that .NET framework 2 and Visual Studio are required for the code execution process. In addition, the AIMCS.cs file must be added to the project file.
-
+![add_mimcs](https://user-images.githubusercontent.com/64810541/81226768-a82f9a80-8feb-11ea-8847-7b1c1f7eb81d.jpg)
 Here we have provided two examples. In the first example (which could be considered as the schema of our method) we simply show how AIMCS works for compression of one tiny string.
 
 ### Example 1:
