@@ -137,6 +137,9 @@ If you find AIMCS useful please cite us in your work:
   organization={IEEE}
 }
  ```  
+## Authors
 
+-Abedi, Masoud
+-Pourkiani, Mohammadreza
 
 
