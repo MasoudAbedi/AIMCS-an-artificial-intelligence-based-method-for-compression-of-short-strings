@@ -12,7 +12,7 @@ We programmed the AIMCS algorithm by C# in Windows. It must be noticed that .NET
 
 # Example 1:
 
-```ruby
+```cs
 AIMCSClass AIMCSSend = new AIMCSClass();
 AIMCSClass AIMCSReceive = new AIMCSClass();
 byte[] t_byte = AIMCSSend.Compress("Mytext");
@@ -27,7 +27,7 @@ And in the second example we show how AIMCS works for compression of several dif
 The generated tiny strings can be found in the attached file “TinyStringExmples.text” and in the following we have provided explanations about different parts of the code. 
 
 The following .NET libraries must be used:
-```
+```ruby
 using System;
 using System.Text;
 using System.IO;
