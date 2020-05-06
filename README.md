@@ -116,12 +116,10 @@ public static void readTextFile(String path)
               Temp[index++] = s;
 }
  ``` 
- ## Output
+ ### The Output of Example 2:
  ```cmd
 The number of strings:10101
-
 The size of original strings:   584630
-
 The size of strings compression with new method:        453206  0.775%  Sort=6
  ```   
 
