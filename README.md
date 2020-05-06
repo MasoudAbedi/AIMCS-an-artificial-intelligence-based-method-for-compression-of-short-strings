@@ -141,6 +141,10 @@ If you find AIMCS useful please cite us in your work:
 
  - Abedi, Masoud 
  - Pourkiani, Mohammadreza 
+ 
+ ## License
+ 
+ This project is licensed under the GNU Affero General Public License v3.0  - see the [LICENSE.md](https://github.com/MasoudAbedi/AIMCS-an-artificial-intelligence-based-method-for-compression-of-short-strings/blob/master/LICENSE) file for details.
 
 ## Acknowledgment
 
