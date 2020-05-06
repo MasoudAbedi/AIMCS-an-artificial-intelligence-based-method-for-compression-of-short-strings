@@ -59,7 +59,7 @@ AIMCSSend.beta = 70000;//beta
 AIMCSSend.alpha = 0.045;//alpha
  ```
 In the following for-loop, the tiny strings gets compressed in each repetition by the object of the AIMCS class. The first if-condition also checks to find out if the table needs to be re-ordered or not. If a re-orders was required, the second if-condition would re-order the table.  
- ```
+ ```cs
 for (int i = 0; i < Temp.Length && Temp[i] != null; i++)
 {
    byte[] t_byte = AIMCSSend.Compress(Temp[i]);
