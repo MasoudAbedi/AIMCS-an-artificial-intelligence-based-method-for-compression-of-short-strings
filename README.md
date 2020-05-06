@@ -146,3 +146,4 @@ If you find AIMCS useful please cite us in your work:
 
 We would like to thank the Graduate Academy of Rostock University and Prof. Ahmad Baraani-Dastjerdi for supporting this research. 
 
+![uni-logo](https://user-images.githubusercontent.com/64810541/81230382-ac5eb680-8ff1-11ea-9b2c-d210fe6508b9.png)
