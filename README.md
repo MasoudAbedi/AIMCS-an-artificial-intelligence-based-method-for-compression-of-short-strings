@@ -22,3 +22,42 @@ string decompressed = AIMCSReceive.Decompress(t_byte);
 
 And in the second example we show how AIMCS works for compression of several different tiny strings. 
 
+Example 2:
+The generated tiny strings can be found in the attached file “TinyStringExmples.text” and in the following we have provided explanations about different parts of the code. 
+
+The following .NET libraries must be used:
+```
+using System;
+using System.Text;
+using System.IO;
+using AIMCS; 
+```
+The following function reads the tiny strings and stores them in the global Temp array. The readTextFile function definition is presented after the main function in this code. 
+```
+readTextFile("TinyStringExmples.txt");
+```
+This part of the code is used for printing the number of messages (tiny strings) and the size of the temp array which includes the contents of the “TinyStringExmples.text”.
+```
+             Int32 originalSize = 0;
+            {
+                int i = 0;
+                for (; i < Temp.Length && Temp[i] != null; i++)
+                    originalSize += Temp[i].Length;
+                Console.WriteLine("The number of strings:" + i.ToString());
+                Console.WriteLine("\nThe size of original strings:" + '\t' + originalSize.ToString());
+            }
+```
+In the following part, the initial values of the variables are set and the compression class (called AIMCS) for both of the sender and received is created independently. As is shown, the alpha and beta parameters are set manually.  
+```
+            double sizeofNewMethod = 0;
+            int counterChar = 0;
+            int useResort = 0;
+            AIMCSClass AIMCSSend = new AIMCSClass();
+            AIMCSClass AIMCSReceive = new AIMCSClass();
+            AIMCSSend.beta = 70000;//beta
+            AIMCSSend.alpha = 0.045;//alpha
+ ```
+In the following for-loop, the tiny strings gets compressed in each repetition by the object of the AIMCS class. The first if-condition also checks to find out if the table needs to be re-ordered or not. If a re-orders was required, the second if-condition would re-order the table.  
+
+
+
