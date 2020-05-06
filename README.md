@@ -86,8 +86,8 @@ for (int i = 0; i < Temp.Length && Temp[i] != null; i++)
 The next part of the code calculates and prints the compression ratio. 
   ```cs
 double percent = Math.Round((-1 * (((originalSize - sizeofNewMethod ) / originalSize) - 1)), 3);
-Console.WriteLine("\nThe size of strings after getting compressed by AIMCS:" + '\t' + (sizeofNewMethod).ToString() + '\t' +
-                                 percent.ToString() + "%" + '\t' + "Sort=" + useResort.ToString());         
+Console.WriteLine("\nThe size of strings after getting compressed by AIMCS:" + '\t' + (sizeofNewMethod).ToString() +
+                                 '\t' + percent.ToString() + "%" + '\t' + "Sort=" + useResort.ToString());         
 Console.ReadKey();
  ```
 
