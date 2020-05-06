@@ -12,7 +12,7 @@ We programmed the AIMCS algorithm by C# in Windows. It must be noticed that .NET
 
 # Example 1:
 
-```
+```ruby
 AIMCSClass AIMCSSend = new AIMCSClass();
 AIMCSClass AIMCSReceive = new AIMCSClass();
 byte[] t_byte = AIMCSSend.Compress("Mytext");
