@@ -115,7 +115,8 @@ public static void readTextFile(String path)
            while ((s = sr.ReadLine()) != null)
               Temp[index++] = s;
 }
- ```   
+ ``` 
+ ## Output
  ```cmd
 The number of strings:10101
 
