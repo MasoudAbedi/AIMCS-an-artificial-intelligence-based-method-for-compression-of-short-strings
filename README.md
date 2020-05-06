@@ -27,18 +27,18 @@ And in the second example we show how AIMCS works for compression of several dif
 The generated tiny strings can be found in the attached file “TinyStringExmples.text” and in the following we have provided explanations about different parts of the code. 
 
 The following .NET libraries must be used:
-```ruby
+```cs
 using System;
 using System.Text;
 using System.IO;
 using AIMCS; 
 ```
 The following function reads the tiny strings and stores them in the global Temp array. The readTextFile function definition is presented after the main function in this code. 
-```
+```cs
 readTextFile("TinyStringExmples.txt");
 ```
 This part of the code is used for printing the number of messages (tiny strings) and the size of the temp array which includes the contents of the “TinyStringExmples.text”.
-```
+```cs
              Int32 originalSize = 0;
             {
                 int i = 0;
@@ -49,7 +49,7 @@ This part of the code is used for printing the number of messages (tiny strings)
             }
 ```
 In the following part, the initial values of the variables are set and the compression class (called AIMCS) for both of the sender and received is created independently. As is shown, the alpha and beta parameters are set manually.  
-```
+```cs
             double sizeofNewMethod = 0;
             int counterChar = 0;
             int useResort = 0;
@@ -84,7 +84,7 @@ In the following for-loop, the tiny strings gets compressed in each repetition b
  ```
  
 The next part of the code calculates and prints the compression ratio. 
-  ```
+  ```cs
 double percent = Math.Round((-1 * (((originalSize - sizeofNewMethod ) / originalSize) - 1)), 3);
             Console.WriteLine("\nThe size of strings after getting compressed by AIMCS:" + '\t' + (sizeofNewMethod).ToString() + '\t' +
                                  percent.ToString() + "%" + '\t' + "Sort=" + useResort.ToString());         
@@ -93,7 +93,7 @@ double percent = Math.Round((-1 * (((originalSize - sizeofNewMethod ) / original
  ```
 
 And the following functions is used for reading the tiny strings that must be compressed.  
- ```
+ ```cs
             public static void readTextFile(String path)
         {
             path = AppDomain.CurrentDomain.BaseDirectory + "\\" + path;
