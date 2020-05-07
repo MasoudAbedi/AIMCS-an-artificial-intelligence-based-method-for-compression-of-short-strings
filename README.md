@@ -5,20 +5,20 @@ The basic source code of the AIMCS algorithm (Abedi Method) that we presented in
 
 For improving the bandwidth utilization and reducing the costs, we proposed AIMCS which is a compression algorithm that is specially designed for the compression of short strings (with an average length of 160 characters). The AIMCS receives a short string as the input and uses an indexing approach. Then it creates a table in which each character is mapped to an index. Therefore, in the next repetition of characters, indexes are used instead of characters, which leads to reduction of size of data. 
 As is mentioned in the description, here we discuss about the basic compression algorithm that we have presented in our paper. Therefore, `α` and `β` parameters must be set manually. As an example, we have prepared several tiny strings that are considered to be generated continuously by the sender, and sent one by one to the receiver.   
-In the following, we show how the AIMCS code works for the compression of considered tiny strings. 
+In the following, we show how the AIMCS code works for the compression of ASCIII and Unicode tiny strings. 
 
 ## Execution Requirements
 We programmed the AIMCS algorithm by C# in Windows. It must be noticed that .NET framework 2 and Visual Studio are required for the code execution process. In addition, the AIMCS.cs file must be added to the project file.
 
 ![How to add the file to your project in visual studio](https://user-images.githubusercontent.com/64810541/81226768-a82f9a80-8feb-11ea-8847-7b1c1f7eb81d.jpg)
 
-Here we have provided two examples (based on ASCII). In the first example (which could be considered as the schema of our method) we simply show how AIMCS works for compression of one tiny string.
+Here we have provided two examples for compression of ASCIII tiny strings. In the first example (which could be considered as the schema of our method) we simply show how AIMCS works for compression of one tiny string.
 
 ### Example 1:
 
 ```cs
-AIMCSClass AIMCSSend = new AIMCSClass();
-AIMCSClass AIMCSReceive = new AIMCSClass();
+AIMCSAv1 AIMCSSend = new AIMCSAv1();
+AIMCSAv1 AIMCSReceive = new AIMCSAv1();
 byte[] t_byte = AIMCSSend.Compress("Mytext");
 string decompressed = AIMCSReceive.Decompress(t_byte);
 ```
@@ -35,7 +35,7 @@ The following .NET libraries must be used:
 using System;
 using System.Text;
 using System.IO;
-using AIMCS; 
+using AIMCSA; 
 ```
 The following function reads the tiny strings and stores them in the global Temp array. The readTextFile function definition is presented after the main function in this code. 
 ```cs
@@ -57,8 +57,8 @@ In the following part, the initial values of the variables are set and the compr
 double sizeofNewMethod = 0;
 int counterChar = 0;
 int useResort = 0;
-AIMCSClass AIMCSSend = new AIMCSClass();
-AIMCSClass AIMCSReceive = new AIMCSClass();
+AIMCSAv1 AIMCSSend = new AIMCSAv1();
+AIMCSAv1 AIMCSReceive = new AIMCSAv1();
 AIMCSSend.beta = 70000;//beta
 AIMCSSend.alpha = 0.045;//alpha
  ```
@@ -124,6 +124,10 @@ The size of strings compression with new method:        453206  0.775%  Sort=6
  ```   
 
 It is worth mentioning that this algorithm can be used for compression of any types of short strings on any application.
+
+For compression of the Unicode tiny strings, in the abovementioned code, instead of AIMCSAv1, AIMCSUv1 class must be used. 
+
+
 
 ## Citation
 If you find AIMCS useful please cite us in your work:
