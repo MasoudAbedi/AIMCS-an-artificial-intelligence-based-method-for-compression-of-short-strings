@@ -8,7 +8,7 @@ As is mentioned in the description, here we discuss about the basic compression 
 In the following, we show how the AIMCS code works for the compression of ASCIII and Unicode tiny strings. 
 
 ## Execution Requirements
-We programmed the AIMCS algorithm by C# in Windows. It must be noticed that .NET framework 2 and Visual Studio are required for the code execution process. In addition, the AIMCS.cs file must be added to the project file.
+We programmed the AIMCS algorithm by C# in Windows. It must be noticed that .NET framework 2 and Visual Studio are required for the code execution process. In addition, the AIMCSAv1.cs file must be added to the project file.
 
 ![How to add the file to your project in visual studio](https://user-images.githubusercontent.com/64810541/81226768-a82f9a80-8feb-11ea-8847-7b1c1f7eb81d.jpg)
 
