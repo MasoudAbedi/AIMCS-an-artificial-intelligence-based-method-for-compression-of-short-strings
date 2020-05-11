@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace AIMCSv1
+namespace AIMCSU
 {
     public class AIMCSUv1
     {
