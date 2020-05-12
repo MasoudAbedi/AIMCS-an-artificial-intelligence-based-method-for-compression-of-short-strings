@@ -52,7 +52,7 @@ Int32 originalSize = 0;
      Console.WriteLine("\nThe size of original strings:" + '\t' + originalSize.ToString());
 }
 ```
-In the following part, the initial values of the variables are set and the compression class (called AIMCS) for both of the sender and received is created independently. As is shown, the alpha and beta parameters are set manually.  
+In the following part, the initial values of the variables are set and the compression class (called AIMCS) for both the sender and receiver is created independently. As is shown, the alpha and beta parameters are set manually.  
 ```cs
 double sizeofNewMethod = 0;
 int counterChar = 0;
@@ -152,7 +152,7 @@ If you find AIMCS useful please cite us in your work:
 
 ## Acknowledgment
 
-We would like to thank the Graduate Academy of Rostock University and Prof. Ahmad Baraani-Dastjerdi for supporting this research. 
+We would like to thank Prof. Meike Klettke, the Graduate Academy Rostock of University and Prof. Ahmad Baraani-Dastjerdi for supporting this research. 
 
 ![uni-logo](https://user-images.githubusercontent.com/64810541/81230695-43c40980-8ff2-11ea-8b3b-8b9e89388047.png)
 
