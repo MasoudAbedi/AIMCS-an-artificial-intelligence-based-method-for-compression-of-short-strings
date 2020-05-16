@@ -74,16 +74,17 @@ for (int i = 0; i < Temp.Length && Temp[i] != null; i++)
     {
        counterChar = 0;
        AIMCSSend.checkUseOfChar();
+       if (AIMCSSend.needResort)
+       {
+            useResort++;
+            AIMCSSend.needResort = false;
+            AIMCSSend.Resort();
+            byte[] newTable = AIMCSSend.makeTableforSending();
+            sizeofNewMethod += newTable.Length;
+            AIMCSReceive.Decompress(newTable);
+       }
     }
-    if (AIMCSSend.needResort)
-    {
-       useResort++;
-       AIMCSSend.needResort = false;
-       AIMCSSend.Resort();
-       byte[] newTable = AIMCSSend.makeTableforSending();
-       sizeofNewMethod += newTable.Length;
-       AIMCSReceive.Decompress(newTable);
-     }
+
 }
  ```
  
