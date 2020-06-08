@@ -137,7 +137,7 @@ If you find AIMCS useful please cite us in your work:
   title={AIMCS: An Artificial Intelligence Based Method for Compression of Short Strings},
   author={Abedi, Masoud, and Pourkiani, Mohammadreza},
   booktitle={IEEE 18th World Symposium on Applied Machine Intelligence and Informatics (SAMI 2020)},
-  pages={},
+  pages={311-318},
   year={2020},
   organization={IEEE}
 }
