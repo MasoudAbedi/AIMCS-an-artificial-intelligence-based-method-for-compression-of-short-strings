@@ -134,13 +134,16 @@ For compression of the Unicode tiny strings, in the abovementioned code, instead
 ## Citation
 If you find AIMCS useful please cite us in your work:
  ```
-@inproceedings{Abedi2020AIMCS,
-  title={AIMCS: An Artificial Intelligence Based Method for Compression of Short Strings},
-  author={Abedi, Masoud, and Pourkiani, Mohammadreza},
-  booktitle={IEEE 18th World Symposium on Applied Machine Intelligence and Informatics (SAMI 2020)},
-  pages={311-318},
-  year={2020},
-  organization={IEEE}
+@inproceedings{Abedi_2020,
+	doi = {10.1109/sami48414.2020.9108719},
+	url = {https://doi.org/10.1109%2Fsami48414.2020.9108719},
+	year = 2020,
+	month = {jan},
+	publisher = {{IEEE}},
+	author = {Masoud Abedi and Mohammadreza Pourkiani},
+	title = {{AIMCS}: An Artificial Intelligence based Method for Compression of Short Strings},
+	booktitle = {2020 {IEEE} 18th World Symposium on Applied Machine Intelligence and Informatics ({SAMI})}
+}
 }
  ```  
 ## Authors
