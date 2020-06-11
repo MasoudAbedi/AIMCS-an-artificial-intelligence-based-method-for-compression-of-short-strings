@@ -157,7 +157,7 @@ If you find AIMCS useful please cite us in your work:
 
 ## Acknowledgment
 
-We would like to thank Prof. Meike Klettke, the Graduate Academy Rostock of University and Prof. Ahmad Baraani-Dastjerdi for supporting this research. 
+We would like to thank Prof. Meike Klettke, Dr. Mohammad Reza Mojtabaei, the Graduate Academy Rostock of University and Prof. Ahmad Baraani-Dastjerdi for supporting this research. 
 
 ![uni-logo](https://user-images.githubusercontent.com/64810541/81230695-43c40980-8ff2-11ea-8b3b-8b9e89388047.png)
 
